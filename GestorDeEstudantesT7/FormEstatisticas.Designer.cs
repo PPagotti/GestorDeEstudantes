@@ -81,7 +81,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMeninos.AutoSize = true;
             this.labelMeninos.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMeninos.Location = new System.Drawing.Point(47, 93);
+            this.labelMeninos.Location = new System.Drawing.Point(23, 93);
             this.labelMeninos.Name = "labelMeninos";
             this.labelMeninos.Size = new System.Drawing.Size(232, 39);
             this.labelMeninos.TabIndex = 1;
@@ -106,12 +106,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMeninas.AutoSize = true;
             this.labelMeninas.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMeninas.Location = new System.Drawing.Point(63, 93);
+            this.labelMeninas.Location = new System.Drawing.Point(25, 93);
             this.labelMeninas.Name = "labelMeninas";
             this.labelMeninas.Size = new System.Drawing.Size(232, 39);
             this.labelMeninas.TabIndex = 2;
             this.labelMeninas.Text = "Meninas: 50%";
             this.labelMeninas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelMeninas.Click += new System.EventHandler(this.labelMeninas_Click);
             this.labelMeninas.MouseEnter += new System.EventHandler(this.labelMeninas_MouseEnter);
             this.labelMeninas.MouseLeave += new System.EventHandler(this.labelMeninas_MouseLeave);
             // 
@@ -124,7 +125,8 @@
             this.Controls.Add(this.panelMeninos);
             this.Controls.Add(this.panelTotalDeEstudantes);
             this.Name = "FormEstatisticas";
-            this.Text = "FormEstatisticas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SGA - Estatísticas";
             this.Load += new System.EventHandler(this.FormEstatisticas_Load);
             this.panelTotalDeEstudantes.ResumeLayout(false);
             this.panelTotalDeEstudantes.PerformLayout();

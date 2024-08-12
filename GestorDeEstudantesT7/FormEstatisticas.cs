@@ -26,7 +26,23 @@ namespace GestorDeEstudantesT7
             corPainelTotal = panelTotalDeEstudantes.BackColor;
             corPainelMeninos = panelMeninos.BackColor;
             corPainelMeninas = panelMeninas.BackColor;  
+            
+            //Exibir os valores (total geral, total de meninos, total de meninas, etc)
+            Estudante estudante = new Estudante();
+
+            double totalEstudantes = Convert.ToDouble(estudante.totalDeEstudantes());
+            double totalMeninos = Convert.ToDouble(estudante.totalDeEstudantesMeninos());
+            double totalMeninas = Convert.ToDouble(estudante.totalDeEstudantesMeninas());
+            //Contar a porcentagem (%).
+            double porcentagemMeninos = totalMeninos * 100 / totalEstudantes;
+            double porcentagemMeninas = totalMeninas * 100 / totalEstudantes;
+
+            labelTotalDeEstudantes.Text = "Total de Estudantes:" + totalEstudantes.ToString();
+            labelMeninos.Text = "% de Meninos:" + porcentagemMeninos.ToString("0.00") + "%";
+            labelMeninas.Text = "% de Meninas:" + porcentagemMeninas.ToString("0.00") + "%";
+
         }
+
 
         private void labelTotalDeEstudantes_MouseEnter(object sender, EventArgs e)
         {
@@ -67,6 +83,11 @@ namespace GestorDeEstudantesT7
         {
             panelMeninas.BackColor = corPainelMeninas;
             labelMeninas.ForeColor= Color.Black;
+        }
+
+        private void labelMeninas_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
